@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Install GUI on Android</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="favicon/fhxs.png" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <h1>echofhxs</h1>
+    </header>
+    <nav>
+      <a href="https://github.com/dhefex" target="_blank">about</a>
+      <a href="https://www.youtube.com/@dhefexss" target="_blank">service</a>
+    </nav>
+    <main>
+      <article>
+        <h1>Install GUI on Android</h1>
+        <section class="build">
+          <h2>✅ Minimum requirements</h2>
+          <ul>
+            <li><strong>Android</strong>: 7.0 (Nougat) or higher</li>
+            <li><strong>Architecture</strong>:ARM64 (aarch64)</li>
+            <li><strong>Availabre RAM: 1 GB free</strong>:</li>
+            <li><strong>Free internal Storage: 2GB</strong></li>
+          </ul>
+          <p>
+            This is the abosolute minimum to start and run XFCE. Perfomance may
+            be limited
+          </p>
+          <h2>👍 Recommended requirements</h2>
+          <ul>
+            <li><strong>Android</strong>: 8.0 or higher</li>
+            <li><strong>Availabre RAM</strong>: 1.5 GB free or more</li>
+            <li><strong>Free internal storage</strong>: 3 GB or more</li>
+          </ul>
+        </section>
+        <h2>steps</h2>
+        <p>
+          Install termux on
+          <strong
+            ><a href="https://f-droid.org/packages/com.termux/" target="_blank"
+              >F-droid</a
+            ></strong
+          >
+        </p>
+
+        <p>
+          After installation, open Termux and type the following command in the
+          prompt
+        </p>
+        <section class="app"><code>pkg update && upgrade -y</code></section>
+
+        <p>The next essential steps is to install the X11 repository</p>
+        <section class="app"><code>pkg install x11-repo</code></section>
+        <p>Next step: Install TigerVNC</p>
+        <section class="app"><code>pkg install tigervnc</code></section>
+        <p>On first start, the VNC server will prompt for a password</p>
+        <section class="app"><code>vncserver</code></section>
+        <p>The next step is to install the XFCE4 desktop enviroment</p>
+        <section class="app"><code>pkg install xfce4</code></section>
+        <p>Next, configure the<strong> ~/.vnc/xstartup</strong></p>
+        <section class="app"><code>nano ~/.vnc/xtartup</code></section>
+        <p>
+          <strong>Note: </strong>This is my personal xstartup configuration.
+        </p>
+        <section class="app">
+          <code
+            >#!/data/data/com.termux/files/usr/bin/sh ## This file is executed
+            during VNC server ## startup. # Launch terminal emulator Aterm. #
+            Requires package 'aterm'. #aterm -geometry 80x24+10+10 -ls & #
+            Launch Tab Window Manager. # Requires package 'xorg-twm'.
+            xfce4-session & xhost + &</code
+          >
+        </section>
+        <p>
+          You can copy and paste this into the <strong>~/.vnc/xstartup</strong>.
+        </p>
+        <p>
+          <strong>Press Ctrl + O</strong> to save the file, press
+          <strong>Enter</strong>, then <strong>Press Ctrl + X</strong> to exit
+        </p>
+        <p>
+          We need to install the
+          <a
+            href="https://www.realvnc.com/en/connect/download/viewer/?lai_vid=63QM39JjDUnp&lai_sr=5-9&lai_sl=l"
+            target="_blank"
+            ><strong>RealVNC Viewer</strong></a
+          >
+          app to run the graphical interface
+        </p>
+        <p> ⚙️ After installing RealVNC, type vncserver in you terminal</p>
+        <p>You will see something like this</p>
+        <section class="app">
+          <code
+            >New 'localhost:10 ()' desktop is localhost:10 Starting applications
+            specified in /data/data/com.termux/files/home/.vnc/xstartup Log file
+            is /data/data/com.termux/files/home/.vnc/localhost:10.log</code
+          >
+        </section>
+        <p>
+          Add the address <strong>localhost:8 </strong>in RealVNC Viewer, then
+          enter the password you configured
+        </p>
+        <p>To finish, check with address are running</p>
+        <section class="app"><code>vncserver -list</code></section>
+        <section class="app"><code>vncserver -kill :8</code></section>
+        <p>The reset password, type</p>
+        <section class="app"><code>vncpasswd</code></section>
+      </article>
+    </main>
+    <footer>
+      <p>Developer by <strong>dhefex</strong></p>
+    </footer>
+  </body>
+</html>
