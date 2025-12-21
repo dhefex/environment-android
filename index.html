@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Install GUI on Android</title>
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="shortcut icon" href="favicon/fhxs.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon/fhxs.png" type="image/x-icon" />
   </head>
   <body>
     <header>
@@ -22,12 +22,12 @@
           <h2>✅ Minimum requirements</h2>
           <ul>
             <li><strong>Android</strong>: 7.0 (Nougat) or higher</li>
-            <li><strong>Architecture</strong>:ARM64 (aarch64)</li>
-            <li><strong>Available RAM: 1 GB free</strong>:</li>
+            <li><strong>Architecture</strong>: ARM64 (aarch64)</li>
+            <li><strong>Available RAM: 1 GB free</strong></li>
             <li><strong>Free internal Storage: 2GB</strong></li>
           </ul>
           <p>
-            This is the abosolute minimum to start and run XFCE. Perfomance may
+            This is the absolute minimum to start and run XFCE4. Performance may
             be limited
           </p>
           <h2>👍 Recommended requirements</h2>
@@ -59,10 +59,10 @@
         <section class="app"><code>pkg install tigervnc</code></section>
         <p>On first start, the VNC server will prompt for a password</p>
         <section class="app"><code>vncserver</code></section>
-        <p>The next step is to install the XFCE4 desktop enviroment</p>
+        <p>The next step is to install the XFCE4 desktop environment</p>
         <section class="app"><code>pkg install xfce4</code></section>
         <p>Next, configure the<strong> ~/.vnc/xstartup</strong></p>
-        <section class="app"><code>nano ~/.vnc/xtartup</code></section>
+        <section class="app"><code>nano ~/.vnc/xstartup</code></section>
         <p>
           <strong>Note: </strong>This is my personal xstartup configuration.
         </p>
@@ -91,7 +91,7 @@
           >
           app to run the graphical interface
         </p>
-        <p> ⚙️ After installing RealVNC, type vncserver in you terminal</p>
+        <p>⚙️ After installing RealVNC, type vncserver in your terminal</p>
         <p>You will see something like this</p>
         <section class="app">
           <code
@@ -104,7 +104,7 @@
           Add the address <strong>localhost:8 </strong>in RealVNC Viewer, then
           enter the password you configured
         </p>
-        <p>To finish, check with address are running</p>
+        <p>To finish, check with addresses are running</p>
         <section class="app"><code>vncserver -list</code></section>
         <section class="app"><code>vncserver -kill :8</code></section>
         <p>The reset password, type</p>
