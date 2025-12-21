@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/github/stars/dhefex/environment-android?style=for-the-badge">
   <img src="https://img.shields.io/github/issues/dhefex/environment-android?style=for-the-badge">
   <img src="https://img.shields.io/github/repo-size/dhefex/environment-android?style=for-the-badge">
-  <img src="https://img.shields.io/github/license/dhefex/environment-android?style=for-the-badge">
+
 </p>
 
 ---
